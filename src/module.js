@@ -1,4 +1,5 @@
 import { name } from "../package.json";
+import { useModule } from "vue-module-loader";
 import router from "./router";
 import App from "./App.vue";
 // 导出模块定义对象
@@ -15,5 +16,9 @@ export default {
     context.app = app;
     app.use(router);
     app.mount("#app");
+    // 加载远程模块
+    useModule(
+      "http://static.mengqinghe.com/vml/module/vue-module-module.iife.js"
+    );
   },
 };
