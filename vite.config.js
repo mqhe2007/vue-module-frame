@@ -20,7 +20,7 @@ export default ({ command }) => {
   };
   if (command === "build" && process.env.BUILD_MODULE === "1") {
     config.build = {
-      sourcemap: true,
+      sourcemap: "inline",
       lib: {
         entry: resolve(__dirname, "src/module.js"),
         // 格式必须为iife
