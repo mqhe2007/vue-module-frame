@@ -20,6 +20,7 @@ export default ({ command }) => {
   };
   if (command === "build" && process.env.BUILD_MODULE === "1") {
     config.build = {
+      outDir: "./dist/module/",
       sourcemap: "inline",
       lib: {
         entry: resolve(__dirname, "src/module.js"),
