@@ -1,3 +1,4 @@
+import * as Vue from "vue";
 import { name } from "../package.json";
 import { useModule } from "vue-module-loader";
 import router from "./router";
@@ -9,11 +10,12 @@ export default {
     /**
      * @type {import('vue-module-loader/src/interfaces').Context}
      */
-    context
+    ctx
   ) {
-    const app = context.Vue.createApp(App);
+    ctx.Vue = Vue;
+    const app = Vue.createApp(App);
     // 主框架实例化后应存储在上下文对象中供其他模块安装时使用
-    context.app = app;
+    ctx.app = app;
     app.use(router);
     app.mount("#app");
     // 加载远程模块

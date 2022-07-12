@@ -4,8 +4,8 @@
       <img src="./assets/logo.svg" />
       <h1>vue-module-loader</h1>
       <h2>微前端架构</h2>
-      <router-link to="/">本地模块</router-link> |
-      <router-link to="/module-page">远程模块</router-link>
+      <button @click="$router.push('/')">本地模块</button> |
+      <button @click="$router.push('/module-page')">远程模块</button>
     </header>
 
     <router-view></router-view>
