@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "vue": "^3.2.37",
-    "vue-module-loader": "^3.1.0-bate1",
+    "vue-module-loader": "3.1.0-bate.2",
     "vue-router": "^4.1.2"
   },
   "devDependencies": {

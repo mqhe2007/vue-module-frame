@@ -7,12 +7,12 @@ specifiers:
   rollup-plugin-styles: ^4.0.0
   vite: ^2.9.14
   vue: ^3.2.37
-  vue-module-loader: ^3.1.0-bate1
+  vue-module-loader: 3.1.0-bate.2
   vue-router: ^4.1.2
 
 dependencies:
   vue: 3.2.37
-  vue-module-loader: link:../vue-module-loader
+  vue-module-loader: 3.1.0-bate.2
   vue-router: 4.1.2_vue@3.2.37
 
 devDependencies:
@@ -57,6 +57,10 @@ packages:
     dependencies:
       '@babel/helper-validator-identifier': 7.18.6
       to-fast-properties: 2.0.0
+
+  /@qingjin/jsuper/1.3.1:
+    resolution: {integrity: sha512-UA2dScsCh4SDo0XDGVoMXVI8oC9VwwTTCqc20bX/uxdRlutill3v1/qk9ikGUGKcW4JKL6Im+ZsEUUKhFspZgg==}
+    dev: false
 
   /@rollup/pluginutils/4.2.1:
     resolution: {integrity: sha512-iKnFXr7NkdZAIHiIWE+BX5ULi/ucVFYWD6TbAV+rZctiRTY2PL6tsIKhoIOaoskiWAkgu+VsbXgUVDNLHf+InQ==}
@@ -1379,6 +1383,13 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
+
+  /vue-module-loader/3.1.0-bate.2:
+    resolution: {integrity: sha512-Us6gLsm1Gifg+FHCoXTBFykIUkuFLVqkXjVHhgEAKiyZHevv2HqYHpXrV3cX/lJ2zb9ZAw7kTa5h0OPNsNevlg==}
+    dependencies:
+      '@qingjin/jsuper': 1.3.1
+      vue: 3.2.37
+    dev: false
 
   /vue-router/4.1.2_vue@3.2.37:
     resolution: {integrity: sha512-5BP1qXFncVRwgV/XnqzsKApdMjQPqWIpoUBdL1ynz8HyLxIX/UDAx7Ql2BjmA5CXT/p61JfZvkpiFWFpaqcfag==}
