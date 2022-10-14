@@ -28,7 +28,7 @@ export default ({ command }) => {
         formats: ["iife"],
         name: camelize(name),
       },
-      minify: true,
+      minify: false,
       rollupOptions: {
         // 为了使用同一vue对象，所有模块必须外置化vue
         external: ["vue"],
