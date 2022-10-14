@@ -1,4 +1,4 @@
-import * as Vue from "vue";
+import {createApp} from "vue";
 import { name } from "../package.json";
 import { useModule } from "vue-module-loader";
 import router from "./router";
@@ -12,8 +12,7 @@ export default {
      */
     ctx
   ) {
-    ctx.Vue = Vue;
-    const app = Vue.createApp(App);
+    const app = createApp(App);
     // 主框架实例化后应存储在上下文对象中供其他模块安装时使用
     ctx.app = app;
     app.use(router);

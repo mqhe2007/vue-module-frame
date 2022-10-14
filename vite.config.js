@@ -19,9 +19,11 @@ export default ({ command }) => {
     plugins: [vue()],
   };
   if (command === "build" && process.env.BUILD_MODULE === "1") {
+    config.define = {
+      "process.env.NODE_ENV": '"production"',
+    };
     config.build = {
       outDir: "./dist/module/",
-      sourcemap: "inline",
       lib: {
         entry: resolve(__dirname, "src/module.js"),
         // 格式必须为iife
