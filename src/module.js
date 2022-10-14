@@ -1,4 +1,4 @@
-import {createApp} from "vue";
+import { createApp } from "vue";
 import { name } from "../package.json";
 import { useModule } from "vue-module-loader";
 import router from "./router";
@@ -19,7 +19,7 @@ export default {
     app.mount("#app");
     // 加载远程模块
     useModule(
-      "http://static.mengqinghe.com/vml/module/vue-module-module.iife.js"
+      "https://mqhe2007.github.io/vue-module-module/module/vue-module-module.iife.js"
     );
   },
 };
